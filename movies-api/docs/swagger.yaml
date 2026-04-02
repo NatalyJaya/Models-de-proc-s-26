@@ -177,6 +177,16 @@ components:
           readOnly: true
         description:
           type: string
+    Country:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+        iso_code:
+          type: string
   securitySchemes:
     ApiKey: 
       type: apiKey
