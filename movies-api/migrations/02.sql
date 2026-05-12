@@ -80,20 +80,6 @@ CREATE TABLE api_keys (
     expires_at TIMESTAMP
 );
 
-
-INSERT INTO api_keys (api_key, active, created_at, expires_at) VALUES
-('c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8', true, NOW(), NOW() + INTERVAL '30 days'),
-('d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9', true, NOW(), NOW() + INTERVAL '30 days'),
-('e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0', true, NOW(), NOW() + INTERVAL '30 days'),
-('f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1', true, NOW(), NOW() + INTERVAL '30 days'),
-('a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2', true, NOW(), NOW() + INTERVAL '30 days'),
-('b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3', true, NOW(), NOW() + INTERVAL '30 days'),
-('c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4', true, NOW(), NOW() + INTERVAL '30 days'),
-('d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5', true, NOW(), NOW() + INTERVAL '30 days'),
-('e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6', true, NOW(), NOW() + INTERVAL '30 days'),
-('f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7', true, NOW(), NOW() + INTERVAL '30 days');
-
-
 INSERT INTO countries (name, iso_code) 
 VALUES ('USA', 'USA'), ('UK', 'UK'), ('Spain', 'ESP'), ('Mexico', 'MEX'), 
 ('Argentina', 'ARG'), ('Brazil', 'BRA'), ('Canada', 'CAN'), ('Australia', 'AUS'), 

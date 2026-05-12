@@ -4,6 +4,7 @@ const YAML = require('yamljs');
 require('dotenv').config();
 const apiKeyMiddleware = require('./utils/token_validator');
 const indexRouter = require("./routes");
+const seedApiKeys = require('./scripts/seed-api-keys');
 
 const swaggerDocument = YAML.load('./docs/swagger.yaml');
 
@@ -15,8 +16,11 @@ app.use('/docs', swagger.serve, swagger.setup(swaggerDocument));
 
 app.use(apiKeyMiddleware);
 
-app.listen(PORT, () => {
+(async () => {
+  await seedApiKeys();
+  app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-});
+  });
+})();
 
 app.use("/", indexRouter);

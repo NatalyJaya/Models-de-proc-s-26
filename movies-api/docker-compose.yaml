@@ -15,6 +15,9 @@ services:
       - DB_NAME=movies
       - DB_PASSWORD=movies
       - DB_PORT=5432
+      - API_KEY_LOCAL_1= ${API_KEY_LOCAL_1}
+      - API_KEY_LOCAL_2= ${API_KEY_LOCAL_2}
+      - API_KEY_LOCAL_3= ${API_KEY_LOCAL_3}
   db:
     image: postgres:15
     container_name: movies-db
@@ -43,6 +46,9 @@ services:
       - DB_NAME=movies
       - DB_PASSWORD=movies
       - DB_PORT=5432
+      - API_KEY_LOCAL_1= ${API_KEY_LOCAL_1}
+      - API_KEY_LOCAL_2= ${API_KEY_LOCAL_2}
+      - API_KEY_LOCAL_3= ${API_KEY_LOCAL_3}
   db-2:
     image: postgres:15
     container_name: movies-db-2
@@ -71,6 +77,9 @@ services:
       - DB_NAME=movies
       - DB_PASSWORD=movies
       - DB_PORT=5432
+      - API_KEY_LOCAL_1= ${API_KEY_LOCAL_1}
+      - API_KEY_LOCAL_2= ${API_KEY_LOCAL_2}
+      - API_KEY_LOCAL_3= ${API_KEY_LOCAL_3}
   db-3:
     image: postgres:15
     container_name: movies-db-3
